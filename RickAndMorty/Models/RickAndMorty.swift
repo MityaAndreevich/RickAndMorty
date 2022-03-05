@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct RickAndMorty {
+struct RickAndMorty: Decodable {
     let info: Info
     let results: [Character]
 }
 
-struct Info {
+struct Info: Decodable {
     let pages: Int
     let next: String?
     let previous: String?
 }
 
-struct Character {
+struct Character: Decodable {
     let id: Int
     let name: String
     let status: String
@@ -42,7 +42,7 @@ struct Character {
     }
 }
 
-struct Location {
+struct Location: Decodable {
     let name: String?
     let url: String?
 }
