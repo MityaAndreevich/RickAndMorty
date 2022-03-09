@@ -16,6 +16,9 @@
 		5F35E54927C65B3900A44C71 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E54827C65B3900A44C71 /* NetworkManager.swift */; };
 		5F35E54C27C936A500A44C71 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E54B27C936A500A44C71 /* Constants.swift */; };
 		5F35E54E27C93A9D00A44C71 /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E54D27C93A9D00A44C71 /* CharacterTableViewController.swift */; };
+		5F35E55027D9390300A44C71 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E54F27D9390300A44C71 /* CharacterDetailsViewController.swift */; };
+		5F35E55227D9397400A44C71 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E55127D9397400A44C71 /* EpisodesViewController.swift */; };
+		5F35E55427D9398500A44C71 /* EpisodeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E55327D9398500A44C71 /* EpisodeDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		5F35E54827C65B3900A44C71 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5F35E54B27C936A500A44C71 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5F35E54D27C93A9D00A44C71 /* CharacterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewController.swift; sourceTree = "<group>"; };
+		5F35E54F27D9390300A44C71 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
+		5F35E55127D9397400A44C71 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		5F35E55327D9398500A44C71 /* EpisodeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				5F35E54D27C93A9D00A44C71 /* CharacterTableViewController.swift */,
+				5F35E54F27D9390300A44C71 /* CharacterDetailsViewController.swift */,
+				5F35E55127D9397400A44C71 /* EpisodesViewController.swift */,
+				5F35E55327D9398500A44C71 /* EpisodeDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -195,9 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F35E55027D9390300A44C71 /* CharacterDetailsViewController.swift in Sources */,
 				5F35E54227C659FF00A44C71 /* RickAndMorty.swift in Sources */,
+				5F35E55227D9397400A44C71 /* EpisodesViewController.swift in Sources */,
 				5F35E54E27C93A9D00A44C71 /* CharacterTableViewController.swift in Sources */,
 				5F35E54927C65B3900A44C71 /* NetworkManager.swift in Sources */,
+				5F35E55427D9398500A44C71 /* EpisodeDetailsViewController.swift in Sources */,
 				5F35E52E27C5594B00A44C71 /* AppDelegate.swift in Sources */,
 				5F35E53027C5594B00A44C71 /* SceneDelegate.swift in Sources */,
 				5F35E54C27C936A500A44C71 /* Constants.swift in Sources */,
