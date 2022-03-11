@@ -9,21 +9,26 @@ import UIKit
 
 class CharacterTableViewController: UITableViewController {
     private var rickAndMorty: RickAndMorty?
+    private let searchController = UISearchController()
+    private var filteredCharacter: [Character] = []
+    private var searchBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false }
+        return text.isEmpty
+    }
+    private var isFiltering: Bool {
+        return searchController.isActive && !searchBarIsEmpty
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 70
+        tableView.backgroundColor = .black
 
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return 0
     }
 
@@ -46,5 +51,10 @@ class CharacterTableViewController: UITableViewController {
 }
 
 extension CharacterTableViewController {
-    
+    func fetchData(from url: String?) {
+        NetworkManager.shared.fetchData(from: url) { rickAndMorty in
+            self.rickAndMorty = rickAndMorty
+            self.tableView.reloadData()
+        }
+    }
 }
