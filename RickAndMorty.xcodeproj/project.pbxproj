@@ -19,6 +19,7 @@
 		5F35E55027D9390300A44C71 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E54F27D9390300A44C71 /* CharacterDetailsViewController.swift */; };
 		5F35E55227D9397400A44C71 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E55127D9397400A44C71 /* EpisodesViewController.swift */; };
 		5F35E55427D9398500A44C71 /* EpisodeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E55327D9398500A44C71 /* EpisodeDetailsViewController.swift */; };
+		5F35E55627DD10F800A44C71 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E55527DD10F800A44C71 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5F35E54F27D9390300A44C71 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		5F35E55127D9397400A44C71 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		5F35E55327D9398500A44C71 /* EpisodeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewController.swift; sourceTree = "<group>"; };
+		5F35E55527DD10F800A44C71 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				5F35E54327C65A0A00A44C71 /* Models */,
 				5F35E54527C65A5A00A44C71 /* ViewControllers */,
 				5F35E54627C65ABB00A44C71 /* Storyboards */,
+				5F35E55727DD110300A44C71 /* Views */,
 				5F35E54727C65AD400A44C71 /* Source */,
 				5F35E54427C65A2E00A44C71 /* SupportingFiles */,
 				5F35E54A27C65B4100A44C71 /* Services */,
@@ -131,6 +134,14 @@
 				5F35E54827C65B3900A44C71 /* NetworkManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		5F35E55727DD110300A44C71 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5F35E55527DD10F800A44C71 /* TableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				5F35E55227D9397400A44C71 /* EpisodesViewController.swift in Sources */,
 				5F35E54E27C93A9D00A44C71 /* CharacterTableViewController.swift in Sources */,
 				5F35E54927C65B3900A44C71 /* NetworkManager.swift in Sources */,
+				5F35E55627DD10F800A44C71 /* TableViewCell.swift in Sources */,
 				5F35E55427D9398500A44C71 /* EpisodeDetailsViewController.swift in Sources */,
 				5F35E52E27C5594B00A44C71 /* AppDelegate.swift in Sources */,
 				5F35E53027C5594B00A44C71 /* SceneDelegate.swift in Sources */,
