@@ -48,8 +48,10 @@ class CharacterTableViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /*guard let insexpPath = tableView.indexPathForSelectedRow else { return }
-        let character = isFiltering ? filteredCharacter[indexPath.row] : rickAndMorty?.results[indexPath.row]*/
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let character = isFiltering ? filteredCharacter[indexPath.row] : rickAndMorty?.results[indexPath.row]
+        let detailVC = segue.destination as! CharacterDetailsViewController
+        detailVC.character = character
     }
     
     
