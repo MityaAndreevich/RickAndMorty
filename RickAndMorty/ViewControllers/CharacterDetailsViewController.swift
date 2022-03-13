@@ -29,5 +29,10 @@ class CharacterDetailsViewController: UIViewController {
 
     
     // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        let episodesVC = navigationController.topViewController as! EpisodesViewController
+        episodesVC.character = character
+    }
 
 }
