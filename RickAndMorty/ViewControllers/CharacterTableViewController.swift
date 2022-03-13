@@ -23,7 +23,10 @@ class CharacterTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = 70
         tableView.backgroundColor = .black
-
+        
+        setupNavigationBar()
+        setupSearchController()
+        fetchData(from: Link.rickAndMortyApi.rawValue)
     }
 
     // MARK: - Table view data source
@@ -33,7 +36,7 @@ class CharacterTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! TableViewCell
         
         let character = isFiltering ? filteredCharacter[indexPath.row] : rickAndMorty?.results[indexPath.row]
         cell.configure(with: character)
@@ -45,8 +48,8 @@ class CharacterTableViewController: UITableViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let insexpPath = tableView.indexPathForSelectedRow else { return }
-        let character = isFiltering ? filteredCharacter[indexPath.row] : rickAndMorty?.results[indexPath.row]
+        /*guard let insexpPath = tableView.indexPathForSelectedRow else { return }
+        let character = isFiltering ? filteredCharacter[indexPath.row] : rickAndMorty?.results[indexPath.row]*/
     }
     
     

@@ -18,4 +18,10 @@ class TableViewCell: UITableViewCell {
             characterImageView.backgroundColor = .white
         }
     }
+    
+    //MARK: - Public Methods
+    func configure(with character: Character?) {
+        nameLabel.text = character?.name
+        characterImageView.fetchImage(from: character?.image ?? "")
+    }
 }
