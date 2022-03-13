@@ -21,6 +21,7 @@
 		5F35E55427D9398500A44C71 /* EpisodeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E55327D9398500A44C71 /* EpisodeDetailsViewController.swift */; };
 		5F35E55627DD10F800A44C71 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E55527DD10F800A44C71 /* TableViewCell.swift */; };
 		5F35E55927DE347800A44C71 /* CharacterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E55827DE347800A44C71 /* CharacterImageView.swift */; };
+		5F35E55B27DE64E000A44C71 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35E55A27DE64E000A44C71 /* ImageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5F35E55327D9398500A44C71 /* EpisodeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsViewController.swift; sourceTree = "<group>"; };
 		5F35E55527DD10F800A44C71 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		5F35E55827DE347800A44C71 /* CharacterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImageView.swift; sourceTree = "<group>"; };
+		5F35E55A27DE64E000A44C71 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				5F35E54827C65B3900A44C71 /* NetworkManager.swift */,
+				5F35E55A27DE64E000A44C71 /* ImageManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				5F35E55027D9390300A44C71 /* CharacterDetailsViewController.swift in Sources */,
 				5F35E54227C659FF00A44C71 /* RickAndMorty.swift in Sources */,
 				5F35E55227D9397400A44C71 /* EpisodesViewController.swift in Sources */,
+				5F35E55B27DE64E000A44C71 /* ImageManager.swift in Sources */,
 				5F35E54E27C93A9D00A44C71 /* CharacterTableViewController.swift in Sources */,
 				5F35E55927DE347800A44C71 /* CharacterImageView.swift in Sources */,
 				5F35E54927C65B3900A44C71 /* NetworkManager.swift in Sources */,
