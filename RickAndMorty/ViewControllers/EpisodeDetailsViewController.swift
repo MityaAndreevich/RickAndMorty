@@ -8,6 +8,8 @@
 import UIKit
 
 class EpisodeDetailsViewController: UIViewController {
+    
+    var episode: Episode!
 
     override func viewDidLoad() {
         super.viewDidLoad()

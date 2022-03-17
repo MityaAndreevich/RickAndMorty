@@ -45,19 +45,28 @@ class EpisodesViewController: UITableViewController {
         let episodeURL = character.episode[indexPath.row]
         content.textProperties.color = .white
         content.textProperties.font = UIFont.boldSystemFont(ofSize: 18)
-        
+        NetworkManager.shared.fetchEpisode(from: episodeURL) { result in
+            switch result {
+            case .success(let episode):
+                self.episodes.append(episode)
+                content.text = episode.name
+                cell.contentConfiguration = content
+            case .failure(let error):
+                print(error)
+            }
+        }
         
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let episode = episodes[indexPath.row]
+        performSegue(withIdentifier: "showEpisode", sender: episode)
     }
-    */
-
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let episodeDetailsVC = segue.destination as! EpisodeDetailsViewController
+        episodeDetailsVC.episode = sender as? Episode
+    }
 }
