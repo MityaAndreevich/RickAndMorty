@@ -13,6 +13,10 @@ class CharacterImageView: UIImageView {
             image = UIImage(named: "picture")
             return
         }
+        
+        ImageManager.shared.fetchImage(from: url) { data, response in
+            self.image = UIImage(data: data)
+        }
     }
 
     

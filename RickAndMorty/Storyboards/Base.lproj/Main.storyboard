@@ -24,19 +24,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4u-rP-iXH" customClass="CharacterImageView" customModule="RickAndMorty" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="14" width="97" height="75"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTP-xB-CVA">
-                                            <rect key="frame" x="125" y="41" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Jb8-vZ-X4V">
+                                            <rect key="frame" x="16" y="10" width="388" height="50"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d4u-rP-iXH" customClass="CharacterImageView" customModule="RickAndMorty" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="3SJ-mb-nK6"/>
+                                                        <constraint firstAttribute="height" constant="50" id="7JH-cI-ECL"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTP-xB-CVA">
+                                                    <rect key="frame" x="57" y="15" width="331" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Jb8-vZ-X4V" firstAttribute="top" secondItem="Evq-aL-PFU" secondAttribute="top" constant="10" id="9yU-bh-Xe5"/>
+                                        <constraint firstAttribute="trailing" secondItem="Jb8-vZ-X4V" secondAttribute="trailing" constant="10" id="fyb-eF-BHh"/>
+                                        <constraint firstItem="Jb8-vZ-X4V" firstAttribute="leading" secondItem="Evq-aL-PFU" secondAttribute="leading" constant="16" id="rTW-hj-C8v"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="characterImageView" destination="d4u-rP-iXH" id="KDQ-wO-f8P"/>
                                     <outlet property="nameLabel" destination="xTP-xB-CVA" id="adc-Gu-R6y"/>
@@ -48,7 +61,14 @@
                             <outlet property="delegate" destination="2Qs-cM-eYb" id="JVd-5u-OmY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Nhj-Gp-jMy"/>
+                    <navigationItem key="navigationItem" id="Nhj-Gp-jMy">
+                        <barButtonItem key="leftBarButtonItem" title="Prev" id="v7v-pR-hg0">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="PVL-mH-mJl">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="PKA-DO-Ndg" kind="show" id="I7h-uO-weZ"/>
                     </connections>
@@ -65,7 +85,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZpL-hN-EAL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZpL-hN-EAL" customClass="CharacterImageView" customModule="RickAndMorty" customModuleProvider="target">
                                 <rect key="frame" x="87" y="109" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
