@@ -10,6 +10,7 @@ import UIKit
 class EpisodeDetailsViewController: UIViewController {
     
     var episode: Episode!
+    private var characters: [Character] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -55,7 +55,6 @@ class EpisodesViewController: UITableViewController {
                 print(error)
             }
         }
-        
         return cell
     }
     
