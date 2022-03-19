@@ -63,8 +63,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Nhj-Gp-jMy">
-                        <barButtonItem key="leftBarButtonItem" title="Prev" id="v7v-pR-hg0"/>
-                        <barButtonItem key="rightBarButtonItem" tag="1" title="Next" id="PVL-mH-mJl"/>
+                        <barButtonItem key="leftBarButtonItem" title="Prev" id="v7v-pR-hg0">
+                            <connections>
+                                <action selector="updateData:" destination="2Qs-cM-eYb" id="mDo-Ms-rEw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" tag="1" title="Next" id="PVL-mH-mJl">
+                            <connections>
+                                <action selector="updateData:" destination="2Qs-cM-eYb" id="B9T-Ku-Hsr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="PKA-DO-Ndg" kind="show" id="IGE-7s-eUt"/>

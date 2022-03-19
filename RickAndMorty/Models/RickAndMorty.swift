@@ -15,7 +15,7 @@ struct RickAndMorty: Decodable {
 struct Info: Decodable {
     let pages: Int
     let next: String?
-    let previous: String?
+    let prev: String?
 }
 
 struct Character: Decodable {
