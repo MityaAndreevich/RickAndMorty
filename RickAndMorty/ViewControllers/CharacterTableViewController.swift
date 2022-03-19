@@ -18,7 +18,7 @@ class CharacterTableViewController: UITableViewController {
     private var isFiltering: Bool {
         return searchController.isActive && !searchBarIsEmpty
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 70
@@ -28,19 +28,19 @@ class CharacterTableViewController: UITableViewController {
         setupSearchController()
         fetchData(from: Link.rickAndMortyApi.rawValue)
     }
-
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         isFiltering ? filteredCharacter.count : rickAndMorty?.results.count ?? 0
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
         
         let character = isFiltering ? filteredCharacter[indexPath.row] : rickAndMorty?.results[indexPath.row]
         cell.configure(with: character)
-
+        
         return cell
     }
     
@@ -55,7 +55,6 @@ class CharacterTableViewController: UITableViewController {
     @IBAction func updateData(_ sender: UIBarButtonItem) {
         sender.tag == 1 ? fetchData(from: rickAndMorty?.info.next) : fetchData(from: rickAndMorty?.info.prev)
     }
-    
     
     //MARK: - Private methods
     private func setupSearchController() {
@@ -84,7 +83,7 @@ class CharacterTableViewController: UITableViewController {
             navBarAppearance.backgroundColor = .black
             navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
             navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-
+            
             navigationController?.navigationBar.standardAppearance = navBarAppearance
             navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
         }

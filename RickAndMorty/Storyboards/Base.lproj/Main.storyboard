@@ -35,8 +35,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTP-xB-CVA">
-                                                    <rect key="frame" x="57" y="31.5" width="325" height="21.5"/>
-                                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                                    <rect key="frame" x="57" y="30" width="325" height="24.5"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -54,6 +54,7 @@
                                 <connections>
                                     <outlet property="characterImageView" destination="d4u-rP-iXH" id="KDQ-wO-f8P"/>
                                     <outlet property="nameLabel" destination="xTP-xB-CVA" id="adc-Gu-R6y"/>
+                                    <segue destination="PKA-DO-Ndg" kind="show" id="h34-yq-i8n"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -74,9 +75,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="PKA-DO-Ndg" kind="show" id="IGE-7s-eUt"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfe-CG-rHY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,20 +88,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZpL-hN-EAL" customClass="CharacterImageView" customModule="RickAndMorty" customModuleProvider="target">
-                                <rect key="frame" x="87" y="109" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQE-pS-DCQ">
-                                <rect key="frame" x="186" y="290" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xhn-Tm-YrK">
+                                <rect key="frame" x="16" y="96" width="382" height="270.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZpL-hN-EAL" customClass="CharacterImageView" customModule="RickAndMorty" customModuleProvider="target">
+                                        <rect key="frame" x="71" y="0.0" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="eDv-ng-s9Q"/>
+                                            <constraint firstAttribute="width" constant="240" id="wv5-Jf-3DF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQE-pS-DCQ">
+                                        <rect key="frame" x="0.0" y="250" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ZpL-hN-EAL" firstAttribute="centerX" secondItem="Xhn-Tm-YrK" secondAttribute="centerX" id="iXE-kC-BUv"/>
+                                    <constraint firstItem="uQE-pS-DCQ" firstAttribute="top" secondItem="ZpL-hN-EAL" secondAttribute="bottom" constant="10" id="oNe-YM-WH9"/>
+                                    <constraint firstItem="uQE-pS-DCQ" firstAttribute="leading" secondItem="Xhn-Tm-YrK" secondAttribute="leading" id="yii-Tq-BzT"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GnP-l3-rif"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xhn-Tm-YrK" firstAttribute="leading" secondItem="GnP-l3-rif" secondAttribute="leading" constant="16" id="Hev-DK-rBa"/>
+                            <constraint firstItem="Xhn-Tm-YrK" firstAttribute="top" secondItem="GnP-l3-rif" secondAttribute="top" constant="8" id="L8s-S1-ut3"/>
+                            <constraint firstItem="GnP-l3-rif" firstAttribute="trailing" secondItem="Xhn-Tm-YrK" secondAttribute="trailing" constant="16" id="nO3-3x-hTG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5wD-CM-pNC">
                         <barButtonItem key="rightBarButtonItem" title="Episodes" id="ux1-PW-vjG">
