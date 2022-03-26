@@ -9,7 +9,7 @@ import UIKit
 
 class CharacterTableViewController: UITableViewController {
     private var rickAndMorty: RickAndMorty?
-    private let searchController = UISearchController()
+    private let searchController = UISearchController(searchResultsController: nil)
     private var filteredCharacter: [Character] = []
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
@@ -33,7 +33,6 @@ class CharacterTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         isFiltering ? filteredCharacter.count : rickAndMorty?.results.count ?? 0
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell

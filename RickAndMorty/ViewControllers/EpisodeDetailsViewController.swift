@@ -69,6 +69,6 @@ extension EpisodeDetailsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let character = characters[indexPath.row]
-        performSegue(withIdentifier: "ShowCharacter", sender: character)
+        performSegue(withIdentifier: "showCharacter", sender: character)
     }
 }

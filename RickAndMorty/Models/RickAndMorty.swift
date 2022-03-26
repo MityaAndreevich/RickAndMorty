@@ -44,7 +44,6 @@ struct Character: Decodable {
 
 struct Location: Decodable {
     let name: String?
-    let url: String?
 }
 
 struct Episode: Decodable {
