@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8ag-7Q-AO0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -15,8 +15,28 @@
                     <view key="view" contentMode="scaleToFill" id="aXG-kN-yZC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eZF-m6-yaf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.56805285770000002" green="0.73493117320000001" blue="0.2823529541" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rick and Morty" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wH-kb-Vsq">
+                                <rect key="frame" x="123" y="432.5" width="168" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JBi-p6-Fyr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2wH-kb-Vsq" firstAttribute="centerY" secondItem="aXG-kN-yZC" secondAttribute="centerY" id="Cef-xh-9Qo"/>
+                            <constraint firstItem="eZF-m6-yaf" firstAttribute="top" secondItem="aXG-kN-yZC" secondAttribute="top" id="FRf-3m-6iK"/>
+                            <constraint firstItem="eZF-m6-yaf" firstAttribute="leading" secondItem="aXG-kN-yZC" secondAttribute="leading" id="Oy2-A4-ajM"/>
+                            <constraint firstAttribute="bottom" secondItem="eZF-m6-yaf" secondAttribute="bottom" id="po7-0d-Fpz"/>
+                            <constraint firstAttribute="trailing" secondItem="eZF-m6-yaf" secondAttribute="trailing" id="qa2-cj-c7M"/>
+                            <constraint firstItem="2wH-kb-Vsq" firstAttribute="centerX" secondItem="aXG-kN-yZC" secondAttribute="centerX" id="x3L-iS-cAX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZh-HT-AOT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
