@@ -20,7 +20,7 @@ class EpisodeDetailsViewController: UIViewController {
             }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setCharacters()

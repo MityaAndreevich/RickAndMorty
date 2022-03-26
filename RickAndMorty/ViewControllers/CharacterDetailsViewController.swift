@@ -36,5 +36,4 @@ class CharacterDetailsViewController: UIViewController {
         let episodesVC = navigationController.topViewController as! EpisodesViewController
         episodesVC.character = character
     }
-
 }

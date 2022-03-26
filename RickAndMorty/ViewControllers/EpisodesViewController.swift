@@ -10,7 +10,7 @@ import UIKit
 class EpisodesViewController: UITableViewController {
     var character: Character!
     var episodes: [Episode] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 70
